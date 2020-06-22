@@ -43,22 +43,50 @@ class Album {
 
     public static void stop() {
 
+        // not sure how to implement this outside of a simple message
+
+        System.out.println("Current song stopped.")
+
     }
 
     public static void nextSong() {
+
+        // check for next song in playlist then play
+
+        if(listIterator.hasNext()) {
+            System.out.println("Now playing: " + listIterator.next().toString());
+        }
+        else {
+            System.out.println("No songs exist after this one.")
+        }
+    }
 
     }
 
     public static void previousSong() {
 
+    // check for previous song in playlist then play
+
+    if(listIterator.hasPrevious()) {
+        System.out.println("Now playing: " + listIterator.previous().toString());
+    }
+    else {
+        System.out.println("No songs exist before this one.")
+    }
+
     }
 
     public static void repeatSong() {
-        
+
+    // code to print current song again? Probably not right.
+
+        System.out.println("Now playing: " + listIterator());
+
     }
 
     public static void removePlaylist() {
-        if
+        if(playlist.size() > 0) {
+            listIterator.remove();
     }
 
 }
