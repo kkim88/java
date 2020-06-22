@@ -78,7 +78,7 @@ class CellPhone {
                 return true;
     }
 
-    quit() {
+    public quit() {
             system.exit(0);
     }
 

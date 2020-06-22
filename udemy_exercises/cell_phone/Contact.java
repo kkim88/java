@@ -18,14 +18,37 @@ class Contact {
     }
     
     public static modifyContact() {
+
+        int found = findContact(oldContact);
+        if (found < 0) {
+            System.out.println(oldContact.getName() + " was not found.");
+            return false;
+        }
+        this.ContactList.set(found, newContact);
+        System.out.pritln(oldContact.getName() + " was updated to " + newContact.getName());
+        return true;
         
     }
     
     public static searchContact() {
-        
+
+        if (findContact(contact) >= 0) {
+            return contact.getName();
+        }
+        return null;
+
     }
     
     public static removeContact() {
+
+        int found = findContact(oldContact);
+        if (found < 0) {
+            System.out.println(oldContact.getName() + " was not found.");
+            return false;
+        }
+        this.ContactList.remove(found);
+        System.out.println(contact.getName() + " deleted.");
+        return true;
         
     }
 
