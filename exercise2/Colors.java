@@ -5,11 +5,13 @@ public class Colors {
     String[] colorful(String[] strings) {
         // For the given strings, keep all the strings that begin with a color ("red", "yellow", "green", "blue", etc.) return an array of strings that start with a color.  discard all the other strings.  If no strings start with a color in the input array, return an empty array.
 
+        // filter by using string comparisons? do I make multiple comparison statements for each color?
+
+        String[] colorNames = {"red", "yellow", "green", "blue", "pink", "black"}
+
         // For loop to make filter into a new array
 
         for (int i = 0; i < strings.length; i++) {
-
-            // filter for colors. how to make?
 
             // create new array for filtered strings
         }
